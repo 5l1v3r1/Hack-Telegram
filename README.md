@@ -13,7 +13,7 @@
 <h6>
 ابتدا اسکریپت را از لینک زیر دانلود کنید:
 <br>
-https://github.com/HACKGM/Hack-Telegram/archive/refs/heads/main.zip
+https://github.com/tHACKGM/Hack-Telegram/archive/refs/heads/main.zip
 </br>
 - سپس فایل Telegram.php  را ویرایش کنید و توکن ربات و آیدی عددی خودتون رو مانند تصویر زیر در اون قرار بدید و فایل رو ذخیره کنید،
 <img src="pic.png">
@@ -32,7 +32,7 @@ https://github.com/HACKGM/Hack-Telegram/archive/refs/heads/main.zip
 <br>
 ابتدا وارد ترموکس بشید و با دستور زیر اسکریپت رو دانلود کنید:
 <br><pre>
-git clone https://github.com/HACKGM/Hack-Telegram
+git clone https://github.com/tHACKGM/Hack-Telegram
 </pre>
 سپس با دستور زیر وارد پوشه اسکریپت بشید:
 <br><pre>
